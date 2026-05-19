@@ -1,0 +1,43 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<main class="home-page">
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Character Builder • Rules Compendium • World Atlas</p>
+
+      <h1>Welcome to the Kalix Codex</h1>
+
+      <p class="hero-text">
+        Build heroes, explore cultures, master spheres, and uncover the nations of Kalix.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="/characters">View Characters</a>
+        <a class="button secondary" href="/heritages">Browse the Codex</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-grid">
+    <article class="feature-card">
+      <h2>Characters</h2>
+      <p>Create, save, and view heroes built from the rules of Kalix.</p>
+      <a href="/characters">Open Character Vault</a>
+    </article>
+
+    <article class="feature-card">
+      <h2>Rules</h2>
+      <p>Browse heritages, cultures, destinies, classes, spheres, backgrounds, and feats.</p>
+      <a href="/heritages">Explore Rules</a>
+    </article>
+
+    <article class="feature-card">
+      <h2>World</h2>
+      <p>Explore continents, regions, nations, histories, and cultures across Kalix.</p>
+      <a href="/gazetteer">Enter Gazetteer</a>
+    </article>
+  </section>
+</main>
+
+<%- include("../partials/footer") %>
