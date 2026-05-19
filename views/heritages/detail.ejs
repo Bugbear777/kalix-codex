@@ -1,0 +1,26 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<main class="content-page">
+  <section class="page-header">
+    <p class="eyebrow">Heritage</p>
+    <h1><%= heritage.name %></h1>
+    <p><%= heritage.summary %></p>
+  </section>
+
+  <section class="detail-panel">
+    <h2>Overview</h2>
+    <p><%= heritage.description %></p>
+
+    <h2>Traits</h2>
+    <ul class="trait-list">
+      <% heritage.traits.forEach((trait) => { %>
+        <li><%= trait %></li>
+      <% }) %>
+    </ul>
+
+    <a class="button secondary" href="/heritages">Back to Heritages</a>
+  </section>
+</main>
+
+<%- include("../partials/footer") %>

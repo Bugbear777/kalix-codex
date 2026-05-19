@@ -13,7 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const indexRoutes = require("./routes/index");
+const heritageRoutes = require("./routes/heritages");
+const cultureRoutes = require("./routes/cultures");
+
 app.use("/", indexRoutes);
+app.use("/heritages", heritageRoutes);
+app.use("/cultures", cultureRoutes);
 
 app.use((req, res) => {
   res.status(404).render("pages/404", {
