@@ -37,5 +37,19 @@
         <a href="/nations">Nations</a>
       </div>
     </div>
+    <% if (currentUser) { %>
+  <div class="nav-auth">
+    <span class="nav-user">Welcome, <%= currentUser.username %></span>
+
+    <form action="/logout" method="POST" class="logout-form">
+      <button type="submit" class="logout-button">Logout</button>
+    </form>
+  </div>
+<% } else { %>
+  <div class="nav-auth">
+    <a href="/login">Login</a>
+    <a href="/register" class="nav-register-link">Register</a>
+  </div>
+<% } %>
   </nav>
 </header>
