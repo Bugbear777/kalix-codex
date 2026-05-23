@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed:human": "node data/seedHuman.js",
+    "seed:halfling": "node data/seedHalfling.js",
+    "seed:deva": "node data/seedDeva.js",
+    "seed:asurai": "node data/seedAsurai.js",
+    "seed:dwarf": "node data/seedDwarf.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +19,8 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "ejs": "^5.0.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongodb": "^7.2.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"

@@ -1,0 +1,70 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<main class="content-page">
+  <a href="/ancestries" class="back-link">← Back to Ancestries</a>
+
+  <article class="detail-panel">
+    <h1><%= ancestry.name %></h1>
+
+    <p class="summary"><%= ancestry.summary %></p>
+
+    <% if (ancestry.description && ancestry.description.length > 0) { %>
+      <section>
+        <% ancestry.description.forEach(paragraph => { %>
+          <p><%= paragraph %></p>
+        <% }) %>
+      </section>
+    <% } %>
+
+    <section>
+      <h2><%= ancestry.name %> Traits</h2>
+
+      <% if (traits.length > 0) { %>
+        <% traits.forEach(trait => { %>
+          <div class="rule-block">
+            <h3><%= trait.name %></h3>
+            <p><%= trait.description %></p>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No ancestry traits found.</p>
+      <% } %>
+    </section>
+
+    <section>
+      <h2><%= ancestry.name %> Gifts</h2>
+
+      <% if (gifts.length > 0) { %>
+        <% gifts.forEach(gift => { %>
+          <div class="rule-block">
+            <h3><%= gift.name %></h3>
+
+            <% if (gift.summary) { %>
+              <p><strong><%= gift.summary %></strong></p>
+            <% } %>
+
+            <% if (gift.description && gift.description.length > 0) { %>
+              <% gift.description.forEach(paragraph => { %>
+                <p><%= paragraph %></p>
+              <% }) %>
+            <% } %>
+
+            <% if (gift.features && gift.features.length > 0) { %>
+              <% gift.features.forEach(feature => { %>
+                <div class="feature-block">
+                  <h4><%= feature.name %></h4>
+                  <p><%= feature.description %></p>
+                </div>
+              <% }) %>
+            <% } %>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No ancestry gifts found.</p>
+      <% } %>
+    </section>
+  </article>
+</main>
+
+<%- include("../partials/footer") %>

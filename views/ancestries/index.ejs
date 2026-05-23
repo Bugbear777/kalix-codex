@@ -1,0 +1,35 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<main class="content-page">
+  <section class="page-header">
+    <p class="eyebrow">Character Origins</p>
+    <h1>Ancestries</h1>
+    <p>
+      Browse the peoples, lineages, and origins available to characters in Kalix.
+    </p>
+  </section>
+
+  <section class="card-grid">
+    <% ancestries.forEach(ancestry => { %>
+      <article class="content-card">
+        <h2><%= ancestry.name %></h2>
+        <p><%= ancestry.summary %></p>
+
+        <% if (ancestry.tags && ancestry.tags.length > 0) { %>
+          <div class="tag-list">
+            <% ancestry.tags.forEach(tag => { %>
+              <span class="tag"><%= tag %></span>
+            <% }) %>
+          </div>
+        <% } %>
+
+        <p>
+          <a href="/ancestries/<%= ancestry.slug %>">Read Entry →</a>
+        </p>
+      </article>
+    <% }) %>
+  </section>
+</main>
+
+<%- include("../partials/footer") %>
