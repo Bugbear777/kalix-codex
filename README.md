@@ -4,7 +4,7 @@ Kalix Codex is a Node.js and Express web application built as a companion refere
 
 This project was created to demonstrate web application development using JavaScript, Node.js, Express, MongoDB, EJS server-side rendering, session-based authentication, dynamic routing, and database integration.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video]([http://youtube.link.goes.here](https://youtu.be/HQKGCxe1X80))
 
 # Web Pages
 
