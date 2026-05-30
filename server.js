@@ -10,6 +10,7 @@ const { connectToDatabase } = require("./data/database");
 const indexRoutes = require("./routes/index");
 const ancestryRoutes = require("./routes/ancestries");
 const authRoutes = require('./routes/auth');
+const accountRoutes = require("./routes/account");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -41,6 +42,7 @@ app.use((req, res, next) => {
 
 app.use("/", indexRoutes);
 app.use('/', authRoutes);
+app.use("/", accountRoutes);
 app.use("/ancestries", ancestryRoutes);
 
 connectToDatabase()

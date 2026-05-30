@@ -39,12 +39,14 @@
     </div>
     <% if (currentUser) { %>
   <div class="nav-auth">
-    <span class="nav-user">Welcome, <%= currentUser.username %></span>
+  <span class="nav-user">Welcome, <%= currentUser.username %></span>
 
-    <form action="/logout" method="POST" class="logout-form">
-      <button type="submit" class="logout-button">Logout</button>
-    </form>
-  </div>
+  <a href="/account" class="nav-account-link">Account</a>
+
+  <form action="/logout" method="POST" class="logout-form">
+    <button type="submit" class="logout-button">Logout</button>
+  </form>
+</div>
 <% } else { %>
   <div class="nav-auth">
     <a href="/login">Login</a>

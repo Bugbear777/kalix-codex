@@ -580,3 +580,93 @@ h1 {
     width: 100%;
   }
 }
+.account-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.form-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.form-help {
+  margin-top: -0.35rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.form-divider {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid rgba(203, 166, 92, 0.3);
+}
+
+.form-message {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.error-message {
+  color: #ffd8d8;
+  background: rgba(120, 30, 30, 0.35);
+  border: 1px solid rgba(220, 80, 80, 0.5);
+}
+
+.success-message {
+  color: #e7ffd8;
+  background: rgba(48, 100, 40, 0.35);
+  border: 1px solid rgba(110, 180, 90, 0.5);
+}
+
+.danger-card {
+  border-color: rgba(180, 65, 55, 0.55);
+}
+
+.danger-card p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.delete-email {
+  padding: 0.65rem 0.85rem;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(180, 65, 55, 0.45);
+  border-radius: 10px;
+  color: #f0b6ad !important;
+  word-break: break-word;
+}
+
+.form-card .danger-button {
+  color: #fff1ee;
+  background: linear-gradient(135deg, #8f2f2a, #c24f42);
+}
+
+.form-card .danger-button:hover {
+  box-shadow: 0 8px 18px rgba(194, 79, 66, 0.25);
+}
+
+.nav-account-link {
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(203, 166, 92, 0.35);
+  border-radius: 999px;
+}
+
+.nav-account-link:hover {
+  border-color: var(--accent);
+}
+
+@media (max-width: 850px) {
+  .account-layout {
+    grid-template-columns: 1fr;
+  }
+}
